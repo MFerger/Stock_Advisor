@@ -1,0 +1,6 @@
+<?php
+
+/**
+* Recommendation Article Sidebar
+*/
+?>
