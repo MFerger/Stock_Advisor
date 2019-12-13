@@ -9,6 +9,8 @@
   </head>
   <body>
     <header>
-
+      <div class="container">
+        <?php wp_nav_menu(array('theme_location'=>'main', 'menu_id' => 'top-menu', 'container'=>'ul', 'items_wrap' => '<ul id="%1$s">%3$s</ul>', 'depth'=> 2)); ?>
+      </div>
     </header>
     <div class="clearfix"></div>

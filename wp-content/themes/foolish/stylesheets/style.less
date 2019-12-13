@@ -1,6 +1,260 @@
+html {
+  -webkit-text-size-adjust:none;
+}
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color:#FFF;
+	color: #333;
+  font-weight: 400;
+  font-size: 1em;
+	line-height:  1.875;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+	font-smooth: always;
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+}
+.clearfix::before, .clearfix::after {
+  content:" ";
+  display:table;
+}
+.clearfix::after {clear:both;}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.row {
+  display: flex;
+  margin: 0 -15px;
+}
+h1, h2 {
+  margin: 0 0 15px 0;
+  font-weight: 500;
+  @media(max-width: 767px) {
+    margin: 0 0 10px 0;
+  }
+}
+h1 {
+  font-size: 40px;
+  line-height: 50px;
+  @media(max-width: 767px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+  @media(max-width: 767px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+a:hover, a:visited, a:active, a:focus {
+  text-decoration: none;
+}
+table {
+  color: #333;
+  background: white;
+  border: 1px solid grey;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+table thead th,
+table tfoot th {
+  color: #777;
+  background: rgba(0,0,0,.1);
+}
+table caption {
+  padding:.5em;
+}
+table th,
+table td {
+  padding: .5em;
+  border: 1px solid lightgrey;
+}
+section {
+  padding: 50px 0;
+}
+p {
+  margin: 0 0 15px 0;
+}
+[class*='col-'] {
+  position: relative;
+  padding: 0 15px;
+}
+.col-8 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 66.6666666667%;
+  -ms-flex: 0 0 66.6666666667%;
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+.col-4 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.3333333333%;
+  -ms-flex: 0 0 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.sidebar {
+  border: 1px solid grey;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.sidebar {
+  .title {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .logo_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    img {
+      padding: 5px;
+      max-height: 50px;
+      max-width: 50px;
+      width: auto;
+      height: auto;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
 header {
-  background: black;
-  h2 {
-    font-size: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid grey;
+  a {
+    text-decoration: none;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+  }
+  #top-menu {
+    display: flex;
+    li {
+      position: relative;
+      > a {
+        display: block;
+        padding: 10px 15px;
+        transition: 0.5s background;
+        &:hover {
+          background: lightgrey;
+        }
+      }
+      ul.sub-menu {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid grey;
+        li {
+          border-bottom: 1px solid grey;
+          a {
+            font-size: 14px;
+          }
+        }
+        li:last-of-type {
+          border-bottom: none;
+        }
+      }
+      &:hover {
+        ul.sub-menu {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.news_article, .recommendation_article, .company {
+  .info {
+    .article_info {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    p:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+  .company_info, .stock_info {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+.recommended_articles, .news_articles, .companies_index {
+  .col-8, .wrap {
+    .post {
+      a {
+        padding: 20px 20px 20px 0;
+        border-bottom: 1px solid grey;
+        display: block;
+      }
+    }
+    div:last-of-type {
+      a {
+        border: none;
+      }
+    }
+  }
+}
+.custom_pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  .page_numbers {
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  .links {
+    a, span {
+      border: 1px solid grey;
+      padding: 5px 10px;
+      margin: 0 3px;
+    }
+    span {
+      background: lightgrey;
+    }
+    a {
+      text-decoration: none;
+      transition: 0.5s background;
+      &:hover {
+        background: lightgrey;
+      }
+    }
   }
 }

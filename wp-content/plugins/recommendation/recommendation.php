@@ -1,11 +1,11 @@
 <?php
 /**
- * @package Recommendations
+ * @package Recommendation
  * @version 1
  */
 /*
-Plugin Name: Recommendations
-Description: This plugin adds the recommendations custom post type.
+Plugin Name: Recommendation
+Description: This plugin adds the Recommendation custom post type.
 Author: Michael Ferger
 Version: 1
 */
@@ -14,7 +14,7 @@ if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 if( class_exists('ACF') ) :
 
-class Recommendations {
+class Recommendation {
 
   function __construct() {
     add_action('init', [$this, 'register_post_type']);
@@ -23,10 +23,10 @@ class Recommendations {
   public function register_post_type() {
     register_post_type('recommendation', [
       'labels' => [
-        'name' => _x('Recommendations', 'post type general name'),
+        'name' => _x('Recommendation', 'post type general name'),
         'singular_name' => _x('Recommendation', 'post type singular name'),
-        'menu_name' => _x('Recommendations', 'admin menu'),
-        'name_admin_bar' => _x('Recommendations', 'add new on admin bar'),
+        'menu_name' => _x('Recommendation', 'admin menu'),
+        'name_admin_bar' => _x('Recommendation', 'add new on admin bar'),
         'add_new' => _x('Add New Recommendation', 'recommendation'),
         'add_new_item' => __('Add New Recommendation'),
         'new_item' => __('New Recommendation'),
@@ -34,7 +34,7 @@ class Recommendations {
         'view_item' => __('View Recommendation'),
         'all_items' => __('All Recommendations'),
         'search_items' => __('Search Recommendations'),
-        'parent_item_colon' => __('Parent Recommendations:'),
+        'parent_item_colon' => __('Parent Recommendation:'),
         'not_found' => __('No Recommendations found.'),
         'not_found_in_trash' => __('No Recommendations found in Trash.')
       ],
@@ -43,10 +43,9 @@ class Recommendations {
       'capability_type' => 'post',
       'hierarchical' => false,
       'has_archive' => false,
-      'rewrite' => ['slug' => 'recommendation'],
+      'rewrite' => ['slug' => 'recommendation', 'with_front' => false],
       'show_in_rest' => true,
-      'menu_icon' => 'dashicons-thumbs-up',
-      'with_front' => false
+      'menu_icon' => 'dashicons-thumbs-up'
     ]);
     if(!preg_match('/(local)/', $_SERVER['HTTP_HOST'])) {
       require __DIR__ . '/fields.php';
@@ -54,6 +53,6 @@ class Recommendations {
   }
 }
 
-new Recommendations();
+new Recommendation();
 
 endif;
