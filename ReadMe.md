@@ -6,7 +6,7 @@ Hello! Thank you for taking the time to review this project. I tracked all of my
 * Adding styles and further site structure - Dec. 14th: 10:13 am - 11:43 am; 1 hour 30 minutes (Running total:  7hrs 32min)
 * Adding more styles - Dec. 14th: 4:01 pm - 4:57 pm; 56 minutes (Running total:  8hrs 28min)
 * Adding _even more_ styles - Dec. 14th: 6:49 pm - 7:23 pm; 34 minutes (Running total:  9hrs 02min)
-* Setting up site on WPEngine/Creating ReadMe - Dec. 14th: 7:29 pm - 8:25 pm; 58 minutes (Ending total: 9hrs 58min)
+* Setting up site on WPEngine/Creating ReadMe - Dec. 14th: 7:29 pm - 8:25 pm; 56 minutes (Ending total: 9hrs 56min)
 * Final push to GitHub - Dec. 15th: 9:04 am
 
 To view the site I created, please visit https://stockadvisor.wpengine.com. Credentials to the admin have been sent through email.
