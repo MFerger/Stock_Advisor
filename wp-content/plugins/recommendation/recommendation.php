@@ -42,6 +42,11 @@ class Recommendation {
       'show_ui' => true,
       'capability_type' => 'post',
       'hierarchical' => false,
+      'supports' => array(
+        'thumbnail',
+        'editor',
+        'title'
+      ),
       'has_archive' => false,
       'rewrite' => ['slug' => 'recommendation', 'with_front' => false],
       'show_in_rest' => true,
